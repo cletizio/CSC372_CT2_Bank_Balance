@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edc5ab32-db36-4c98-812c-7c32de6e88f1" name="Changes" comment="Added withdraw button and fixed code so that it calculates the final balance correctly.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BankingFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankingFrame.java" afterDir="false" />
-    </list>
+    <list default="true" id="edc5ab32-db36-4c98-812c-7c32de6e88f1" name="Changes" comment="Fixed formatting in JPanel and balance updating" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697991066221</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed formatting in JPanel and balance updating">
+      <created>1697992492016</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697992492016</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -98,6 +102,7 @@
     <MESSAGE value="updated to use Jpanel" />
     <MESSAGE value="Added Deposit button" />
     <MESSAGE value="Added withdraw button and fixed code so that it calculates the final balance correctly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added withdraw button and fixed code so that it calculates the final balance correctly." />
+    <MESSAGE value="Fixed formatting in JPanel and balance updating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed formatting in JPanel and balance updating" />
   </component>
 </project>
