@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edc5ab32-db36-4c98-812c-7c32de6e88f1" name="Changes" comment="Added Deposit button">
+    <list default="true" id="edc5ab32-db36-4c98-812c-7c32de6e88f1" name="Changes" comment="Added withdraw button and fixed code so that it calculates the final balance correctly.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BankingFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankingFrame.java" afterDir="false" />
     </list>
@@ -83,13 +83,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697987525126</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added withdraw button and fixed code so that it calculates the final balance correctly.">
+      <created>1697991066221</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697991066221</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="updated to use Jpanel" />
     <MESSAGE value="Added Deposit button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Deposit button" />
+    <MESSAGE value="Added withdraw button and fixed code so that it calculates the final balance correctly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added withdraw button and fixed code so that it calculates the final balance correctly." />
   </component>
 </project>

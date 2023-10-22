@@ -2,23 +2,24 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 
 public class BankingFrame extends JFrame implements ActionListener {
+    DecimalFormat decimalFormat = new DecimalFormat("0.00");
     private double balance = -100;
-    private JTextField balanceField;
-    private JLabel balanceLabel;
-    private JTextField depositField;
-    private JLabel depositLabel;
-    private JTextField withdrawField;
-    private JLabel withdrawLabel;
-    private JTextField finalBalanceField;
-    private JLabel finalBalanceLabel;
-    private JButton depositButton;
-    private JButton withdrawButton;
-    private JPanel panel;
+    private final JTextField balanceField;
+    private final JLabel balanceLabel;
+    private final JTextField depositField;
+    private final JLabel depositLabel;
+    private final JTextField withdrawField;
+    private final JLabel withdrawLabel;
+    private final JTextField finalBalanceField;
+    private final JLabel finalBalanceLabel;
+    private final JButton depositButton;
+    private final JButton withdrawButton;
+    private final JPanel panel;
 
     BankingFrame() {
-        GridBagConstraints layoutConst = null;
 
         setTitle("Bank Balance App");
 
@@ -29,19 +30,19 @@ public class BankingFrame extends JFrame implements ActionListener {
 
         balanceField = new JTextField(15);
         balanceField.setEditable(true);
-        balanceField.setText("0.00");
+        balanceField.setText(decimalFormat.format(0.00));
 
         withdrawField = new JTextField(15);
         withdrawField.setEditable(true);
-        withdrawField.setText("0.00");
+        withdrawField.setText(decimalFormat.format(0.00));
 
         depositField = new JTextField(15);
         depositField.setEditable(true);
-        depositField.setText("0.00");
+        depositField.setText(decimalFormat.format(0.00));
 
         finalBalanceField = new JTextField(15);
         finalBalanceField.setEditable(false);
-        finalBalanceField.setText("0.00");
+        finalBalanceField.setText(decimalFormat.format(0.00));
 
         depositButton = new JButton("Deposit");
 
@@ -49,11 +50,11 @@ public class BankingFrame extends JFrame implements ActionListener {
 
         depositButton.addActionListener(new ActionListener() {
 
-            public void actionPerformed (ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 balance = updateBalance();
                 double depositAmount = Double.parseDouble(depositField.getText());
                 balance += depositAmount;
-                depositField.setText("0.00");
+                depositField.setText(decimalFormat.format(0.00));
                 updateFinalBalance();
 
             }
@@ -64,16 +65,13 @@ public class BankingFrame extends JFrame implements ActionListener {
                 balance = updateBalance();
                 double withdrawAmount = Double.parseDouble(withdrawField.getText());
 
-                if (withdrawAmount <= balance){
+                if (withdrawAmount <= balance) {
                     balance -= withdrawAmount;
-                }
-                else {
+                } else {
                     JOptionPane.showMessageDialog(panel, "Insufficient funds.");
                 }
-                balanceField.setText(String.valueOf(balance));
-                withdrawField.setText("0.00");
+                withdrawField.setText(decimalFormat.format(0.00));
                 updateFinalBalance();
-
             }
         });
 
@@ -96,11 +94,11 @@ public class BankingFrame extends JFrame implements ActionListener {
     }
 
     public void updateFinalBalance() {
-        finalBalanceField.setText(String.valueOf(balance));
+        finalBalanceField.setText(decimalFormat.format(balance));
     }
 
-    public double updateBalance(){
-        if (balance == -100){
+    public double updateBalance() {
+        if (balance == -100) {
             balance = Double.parseDouble(balanceField.getText());
         }
         return balance;
