@@ -13,6 +13,7 @@ public class BankingFrame extends JFrame implements ActionListener {
     private JTextField finalBalanceField;
     private JLabel finalBalanceLabel;
     private JButton processButton;
+    private JPanel panel;
 
     BankingFrame() {
         GridBagConstraints layoutConst = null;
@@ -43,72 +44,20 @@ public class BankingFrame extends JFrame implements ActionListener {
         processButton = new JButton("Process transactions");
         processButton.addActionListener(this);
 
-        setLayout(new GridBagLayout());
+        panel = new JPanel();
+        panel.setLayout(new GridLayout(0, 2, 10, 10));
 
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 0;
-        layoutConst.gridy = 0;
-        layoutConst.gridwidth = 1;
-        add(balanceLabel, layoutConst);
+        panel.add(balanceLabel);
+        panel.add(balanceField);
+        panel.add(depositLabel);
+        panel.add(depositField);
+        panel.add(withdrawLabel);
+        panel.add(withdrawField);
+        panel.add(processButton);
+        panel.add(finalBalanceLabel);
+        panel.add(finalBalanceField);
 
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 1;
-        layoutConst.gridy = 0;
-        layoutConst.gridwidth = 1;
-        add(balanceField, layoutConst);
-
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 0;
-        layoutConst.gridy = 1;
-        layoutConst.gridwidth = 1;
-        add(depositLabel, layoutConst);
-
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 1;
-        layoutConst.gridy = 1;
-        layoutConst.gridwidth = 1;
-        add(depositField, layoutConst);
-
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 1;
-        layoutConst.gridy = 3;
-        layoutConst.gridwidth = 1;
-        add(processButton, layoutConst);
-
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 0;
-        layoutConst.gridy = 2;
-        layoutConst.gridwidth = 1;
-        add(withdrawLabel, layoutConst);
-
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 1;
-        layoutConst.gridy = 2;
-        layoutConst.gridwidth = 1;
-        add(withdrawField, layoutConst);
-
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 0;
-        layoutConst.gridy = 4;
-        layoutConst.gridwidth = 1;
-        add(finalBalanceLabel, layoutConst);
-
-        layoutConst = new GridBagConstraints();
-        layoutConst.insets = new Insets(10, 10, 10, 10);
-        layoutConst.gridx = 1;
-        layoutConst.gridy = 4;
-        layoutConst.gridwidth = 1;
-        add(finalBalanceField, layoutConst);
-
-
+        add(panel);
     }
 
     @Override
